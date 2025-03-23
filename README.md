@@ -1,11 +1,12 @@
-#This is of SE - Project
+# This is of SE - Project
 
-## Project info
-##Team Details
+## Project Info
 
-##Project Title:
-###Vehicle Parking Management System
-##Group Members:
-###Mudassar Khalid				(22i-1072)
-###Muhammad Daud Cheema			(22i-0875)
-###Muhammad Rahat Shafi			(22i-1061)
+### Team Details
+
+**Project Title:** Vehicle Parking Management System  
+
+**Group Members:**  
+- Mudassar Khalid (22i-1072)  
+- Muhammad Daud Cheema (22i-0875)  
+- Muhammad Rahat Shafi (22i-1061)
