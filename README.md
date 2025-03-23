@@ -1,4 +1,4 @@
-# This is of SE - Project
+# This code is for SE - Project
 
 ## Project Info
 
