@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Input } from '@/components/ui/input';
@@ -6,7 +5,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Search, MapPin, Filter, Clock, Car } from 'lucide-react';
-import ParkingSpot, { ParkingSpotStatus } from '@/components/ParkingSpot';
+import ParkingSpot, { ParkingSlotStatus } from '@/components/ParkingSlot';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -14,7 +13,7 @@ import Footer from '@/components/Footer';
 const mockParkingSpots = [
   {
     id: 'spot-1',
-    status: 'available' as ParkingSpotStatus,
+    status: 'available' as ParkingSlotStatus,
     spotNumber: 'A1',
     floor: '1',
     price: 3.50,
@@ -23,7 +22,7 @@ const mockParkingSpots = [
   },
   {
     id: 'spot-2',
-    status: 'available' as ParkingSpotStatus,
+    status: 'available' as ParkingSlotStatus,
     spotNumber: 'A2',
     floor: '1',
     price: 3.50,
@@ -32,7 +31,7 @@ const mockParkingSpots = [
   },
   {
     id: 'spot-3',
-    status: 'occupied' as ParkingSpotStatus,
+    status: 'occupied' as ParkingSlotStatus,
     spotNumber: 'A3',
     floor: '1',
     occupiedUntil: '14:30',
@@ -41,7 +40,7 @@ const mockParkingSpots = [
   },
   {
     id: 'spot-4',
-    status: 'available' as ParkingSpotStatus,
+    status: 'available' as ParkingSlotStatus,
     spotNumber: 'B1',
     floor: '2',
     price: 4.00,
@@ -50,7 +49,7 @@ const mockParkingSpots = [
   },
   {
     id: 'spot-5',
-    status: 'reserved' as ParkingSpotStatus,
+    status: 'reserved' as ParkingSlotStatus,
     spotNumber: 'B2',
     floor: '2',
     occupiedUntil: '17:00',
@@ -59,7 +58,7 @@ const mockParkingSpots = [
   },
   {
     id: 'spot-6',
-    status: 'available' as ParkingSpotStatus,
+    status: 'available' as ParkingSlotStatus,
     spotNumber: 'B3',
     floor: '2',
     price: 4.00,
@@ -68,7 +67,7 @@ const mockParkingSpots = [
   },
   {
     id: 'spot-7',
-    status: 'charging' as ParkingSpotStatus,
+    status: 'charging' as ParkingSlotStatus,
     spotNumber: 'C1',
     floor: '3',
     occupiedUntil: '16:45',
@@ -77,7 +76,7 @@ const mockParkingSpots = [
   },
   {
     id: 'spot-8',
-    status: 'available' as ParkingSpotStatus,
+    status: 'available' as ParkingSlotStatus,
     spotNumber: 'C2',
     floor: '3',
     price: 4.50,
@@ -325,3 +324,5 @@ const Dashboard = () => {
 };
 
 export default Dashboard;
+
+

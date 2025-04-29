@@ -111,7 +111,7 @@ const Booking = () => {
                               <div className="pt-3 border-t text-sm">
                                 <p className="font-medium mb-1">Contact us:</p>
                                 <p className="text-muted-foreground">support@parkease.com</p>
-                                <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                                <p className="text-muted-foreground">+92 (051) 1234567</p>
                               </div>
                             </div>
                           </CardContent>

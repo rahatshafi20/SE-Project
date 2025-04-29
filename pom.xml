@@ -9,27 +9,75 @@
     <packaging>jar</packaging>
 
     <properties>
-        <java.version>17</java.version>  <!-- Update to your installed version if needed -->
-        <spring-boot.version>3.2.2</spring-boot.version>  <!-- Latest stable version -->
+        <java.version>17</java.version>
+        <spring-boot.version>3.2.2</spring-boot.version>
     </properties>
 
     <dependencies>
+        <!-- Spring Boot Starter Web (For REST APIs) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
+            <artifactId>spring-boot-starter-web</artifactId>
             <version>${spring-boot.version}</version>
+        </dependency>
+
+        <!-- Spring Boot Data JPA (For Database Operations) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+
+        <!-- Lombok (For reducing boilerplate code) -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.30</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Spring Boot Test (For unit and integration tests) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <version>${spring-boot.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- H2 Database (Optional for testing) -->
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>2.2.220</version>
+            <scope>runtime</scope>
         </dependency>
     </dependencies>
 
     <build>
         <plugins>
+            <!-- Compiler Plugin with Source/Target Java Version -->
             <plugin>
-  	  	<groupId>org.springframework.boot</groupId>
-    		<artifactId>spring-boot-maven-plugin</artifactId>
-    		<configuration>
-        		<mainClass>com.example.easypark.EasyParkApplication</mainClass>
-    		</configuration>
-	    </plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <compilerArgs>
+                        <arg>-parameters</arg>
+                    </compilerArgs>
+                </configuration>
+            </plugin>
+
+            <!-- Spring Boot Plugin -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
+                <configuration>
+                    <mainClass>com.example.easypark.EasyParkApplication</mainClass>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>

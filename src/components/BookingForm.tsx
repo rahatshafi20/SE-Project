@@ -57,7 +57,7 @@ type FormValues = z.infer<typeof formSchema>;
 const BookingForm = () => {
   const [searchParams] = useSearchParams();
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const spotId = searchParams.get('spotId');
+  const slotId = searchParams.get('slotId');
   
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -77,7 +77,7 @@ const BookingForm = () => {
     
     console.log('Booking submitted:', {
       ...data,
-      spotId,
+      slotId,
     });
     
     setIsSubmitting(false);
@@ -92,7 +92,7 @@ const BookingForm = () => {
         <CardTitle className="text-xl">Book Your Parking Spot</CardTitle>
         <CardDescription>
           Fill in the details below to reserve your parking space.
-          {spotId && <span className="font-medium block mt-1">Spot ID: {spotId}</span>}
+          {slotId && <span className="font-medium block mt-1">Spot ID: {slotId}</span>}
         </CardDescription>
       </CardHeader>
       <CardContent>

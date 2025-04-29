@@ -9,6 +9,8 @@ import Dashboard from "./pages/Dashboard";
 import Booking from "./pages/Booking";
 import Profile from "./pages/Profile";
 import NotFound from "./pages/NotFound";
+import ParkingSlots from "./pages/parkingSlots";  // Import the new page
+import PaymentPage from "./pages/PaymentPage";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +25,9 @@ const App = () => (
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/booking" element={<Booking />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/parking-slots" element={<ParkingSlots />} />
+          <Route path="/payment/:reservationId" element={<PaymentPage />} />
+          
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

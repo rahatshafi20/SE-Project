@@ -4,6 +4,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Car, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { Link as RouterLink } from "react-router-dom";
+
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,6 +32,7 @@ const Navbar = () => {
     { name: 'Dashboard', path: '/dashboard' },
     { name: 'Book Parking', path: '/booking' },
     { name: 'Profile', path: '/profile' },
+    { name: 'Parking Slots', path: '/parking-slots' },  // Added this
   ];
 
   const isActive = (path: string) => location.pathname === path;

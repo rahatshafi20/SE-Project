@@ -23,6 +23,7 @@ const Footer = () => {
             <li><Link to="/dashboard" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Dashboard</Link></li>
             <li><Link to="/booking" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Book Parking</Link></li>
             <li><Link to="/profile" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Profile</Link></li>
+            <li><Link to="/parking-slots" className="text-sm text-muted-foreground hover:text-foreground transition-colors">Parking Slots</Link></li>
           </ul>
         </div>
         
@@ -39,8 +40,8 @@ const Footer = () => {
           <h3 className="font-medium mb-4 text-sm">Contact</h3>
           <ul className="space-y-2">
             <li className="text-sm text-muted-foreground">support@parkease.com</li>
-            <li className="text-sm text-muted-foreground">+1 (555) 123-4567</li>
-            <li className="text-sm text-muted-foreground">123 Parking Avenue, City, Country</li>
+            <li className="text-sm text-muted-foreground">+92 (051) 1234567</li>
+            <li className="text-sm text-muted-foreground">123 Parking Avenue, Islamabad, Pakistan</li>
           </ul>
         </div>
       </div>
